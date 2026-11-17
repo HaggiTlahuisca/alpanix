@@ -1,0 +1,504 @@
+@import 'tailwindcss';
+:root {font-family:Manrope,Inter,system-ui,Arial,sans-serif;font-synthesis:none;color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#0a1224;color:#e4e9f7}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed} :focus-visible{outline:2px solid #f1b65a;outline-offset:2px}
+.shell{min-height:100dvh;background:#0a1224;padding-bottom:110px}.topbar{position:sticky;top:0;z-index:10;background:#0e1b38;display:flex;align-items:center;gap:15px;padding:14px 17px;padding-top:max(14px,env(safe-area-inset-top));box-shadow:0 5px 26px #02081480}.header-title{flex:1;min-width:0;display:flex;flex-direction:column}.header-title strong{font-size:21px;letter-spacing:-.5px}.header-title span{color:#a9bddd;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.icon-btn{border:0;color:#dbe6fc;background:transparent;display:flex;align-items:center;justify-content:center;padding:9px;border-radius:10px}.icon-btn:hover{background:#233354}.spinning{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.content{max-width:800px;margin:0 auto;padding:22px 14px}.section-heading{display:flex;align-items:center;justify-content:space-between;margin:0 3px 18px}.section-heading h2{font-size:23px;margin:5px 0 4px;letter-spacing:-.5px}.section-heading p{margin:0;color:#9dadc7;font-size:12px;word-break:break-all}.overline{color:#f5b957;font-weight:800;font-size:10px;letter-spacing:2px}.stats-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 19px}.stats-row span{font-size:12px;color:#d2ddef;background:#1b2946;border:1px solid #344260;display:flex;align-items:center;gap:7px;border-radius:25px;padding:8px 11px}.mail-list{border:1px solid #263652;border-radius:17px;overflow:hidden;background:#131f36}.mail-row{border-bottom:1px solid #283850;display:flex;align-items:stretch;min-height:91px}.mail-row:last-child{border:0}.mail-row.is-unread{background:#182743}.mail-main{flex:1;min-width:0;background:none;color:inherit;border:0;display:flex;text-align:left;align-items:center;gap:12px;padding:13px 3px 13px 13px}.mail-main:hover{background:#253653}.avatar{flex-shrink:0;border:1px solid #627aa6;border-radius:50%;background:#233b61;color:#f3c076;width:39px;height:39px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px}.avatar.big{width:44px;height:44px}.mail-info{min-width:0;flex:1}.mail-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}.mail-top b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px;font-weight:700}.is-read .mail-top b{font-weight:500;color:#bdcbe0}.mail-top time{flex-shrink:0;color:#899bb9;font-size:10px}.mail-subject{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:4px 0;font-weight:650}.is-read .mail-subject{font-weight:400;color:#afbdd5}.mail-account{display:block;font-size:11px;color:#89c9e8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.new-dot{height:7px;width:7px;border-radius:50%;background:#38ddcb;flex-shrink:0;align-self:flex-start;margin-top:5px}.read-switch{border:0;background:transparent;color:#8fb2df;padding:10px;width:42px}.read-switch:hover{color:#f8be69}.empty-box,.loading-message{text-align:center;padding:40px 15px;color:#a7b5cc}.error-box,.notice-box{margin-bottom:15px;border-radius:12px;padding:12px 14px;font-size:13px;display:flex;align-items:center;gap:8px}.error-box{background:#532738;color:#ffd2d8;border:1px solid #9b5065}.notice-box{background:#173e43;color:#cef4ec;border:1px solid #397f7d;justify-content:space-between}.notice-box button{color:inherit;border:0;background:transparent}.compose-fab{position:fixed;right:22px;bottom:25px;border:1px solid #d3a45b;background:#eab866;color:#14213a;border-radius:16px;display:flex;align-items:center;gap:9px;padding:16px 20px;font-weight:800;box-shadow:0 10px 35px #0008}.back-link{display:flex;align-items:center;gap:7px;border:0;background:transparent;color:#9dbdf2;margin:0 0 18px;padding:8px 0;font-size:13px}.detail-card,.compose-card{background:#152139;border:1px solid #293a58;border-radius:18px;padding:19px;box-shadow:0 8px 25px #02071555}.detail-card h2,.compose-card h2{font-size:23px;letter-spacing:-.5px;line-height:1.34;margin:0 0 23px;overflow-wrap:anywhere}.from-block{display:flex;gap:11px;padding-bottom:15px;border-bottom:1px solid #374761}.from-meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}.from-meta strong{font-size:14px}.from-meta small{font-size:12px;word-break:break-all;color:#a0b0cd}.detail-actions,.view-toggle{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}.detail-actions button,.view-toggle button{border:1px solid #354564;border-radius:9px;background:#253351;color:#d7e4fc;padding:9px 12px;display:flex;align-items:center;gap:5px;font-size:12px}.view-toggle .chosen{background:#d7ae6b;color:#17233a;border-color:#d7ae6b;font-weight:800}.security-note{display:flex;align-items:center;gap:5px;font-size:11px;color:#b6c5db;margin:12px 0}.mail-html-frame{width:100%;height:65vh;min-height:360px;border:1px solid #45556a;border-radius:11px;background:white}.plain-body{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7;font-size:14px;padding:12px 0}.attachments{padding:12px;margin-top:20px;border-top:1px solid #374761;font-size:12px;color:#ffc578;display:flex;gap:7px}.compose-card label{display:block;font-size:12px;font-weight:750;color:#c5d2ed;margin-top:17px}.compose-card input,.compose-card select,.compose-card textarea,.login-card input{margin-top:7px;width:100%;color:#ecf1fa;background:#101a30;border:1px solid #455472;border-radius:10px;padding:12px;outline:none}.compose-card input:focus,.compose-card select:focus,.compose-card textarea:focus{border-color:#e9bd74}.compose-card textarea{resize:vertical}.form-note{font-size:11px;color:#a0aeca;line-height:1.5}.primary-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:#efbf72;border:0;border-radius:12px;padding:14px 20px;color:#182138;font-weight:800;width:100%}.send-btn{margin-top:14px}.login-bg{min-height:100dvh;padding:25px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at top,#233960,#0b1326 60%)}.login-card{width:100%;max-width:390px;padding:29px 24px;border-radius:19px;background:#16223a;border:1px solid #334461}.login-brand{display:flex;align-items:center;gap:12px;margin-bottom:29px}.brand-symbol{background:#f1bb68;color:#101c33;padding:10px;display:flex;border-radius:12px}.login-brand h1{font-size:25px;margin:0}.login-brand small{color:#9fafd0;font-size:11px}.login-card h2{font-size:18px;margin:0 0 8px}.login-card p{font-size:13px;color:#a7b8d6;line-height:1.65}.login-card .primary-btn{margin-top:20px}.login-foot{display:flex;gap:7px;align-items:flex-start;font-size:11px;color:#a3b4ce;margin-top:19px}.drawer-backdrop{position:fixed;inset:0;z-index:30;background:#000b}.drawer{height:100%;max-width:335px;width:86%;background:#121e36;overflow-y:auto;border-right:1px solid #384662;padding:17px}.drawer-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px}.drawer-head b{font-size:22px}.drawer-label{color:#d0a356;letter-spacing:2px;font-size:10px;font-weight:bold;margin:17px 12px 9px}.drawer-choice{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:transparent;color:#b7c9e6;border:0;border-radius:11px;padding:12px 11px;font-size:13px}.drawer-choice.active{background:#1e3e6d;color:#fff}.drawer-choice:hover{background:#253957}.drawer-choice.logout{color:#ef9ea5;margin-top:25px}.account-avatar{height:29px;width:29px;flex-shrink:0;border:1px solid #b09b6c;background:#323149;border-radius:50%;color:#f3ba68;display:flex;align-items:center;justify-content:center}.account-label{overflow:hidden;display:flex;flex-direction:column;gap:3px}.account-label b,.account-label small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.account-label small{color:#93a8c8;font-size:10px}.folder-name{flex:1;overflow:hidden;text-overflow:ellipsis}.folder-counter{font-size:11px;color:#d9b570}.drawer-backdrop .icon-btn{padding:6px}@media(min-width:680px){.mail-top b{font-size:15px}.mail-subject{font-size:14px}.content{padding:30px 22px}} 
+
+/* Actualización incremental: destinatarios múltiples, firma persistente y HTML */
+.compose-card input[type="file"]{font-size:12px;padding:12px;max-width:100%;color:#c7d6ec}
+.signature-options{margin-top:24px;padding:15px;border:1px solid #354968;border-radius:13px;background:#111d35;min-width:0}
+.signature-options legend{color:#f1bd6e;font-size:12px;font-weight:800;padding:0 7px}
+.signature-options label{margin-top:12px}
+.signature-preview{padding:13px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.signature-preview img{max-width:220px;max-height:120px;object-fit:contain;background:#fff;border-radius:8px;padding:7px}
+.signature-preview button{display:flex;align-items:center;gap:5px;background:#293954;border:1px solid #546581;color:#e6ecf6;border-radius:8px;padding:8px 12px;font-size:12px}
+.signature-options .form-note{display:flex;align-items:flex-start;gap:6px}
+.remote-images-toggle{display:flex;align-items:center;gap:9px;margin:12px 0 10px;color:#b8c8df;font-size:12px;line-height:1.45}
+.remote-images-toggle input{width:17px;height:17px;accent-color:#eab866;flex-shrink:0}
+.mail-account{word-break:normal}
+.notice-box{animation:notice-appear .22s ease-out}
+@keyframes notice-appear{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+
+/* Navegación de carpetas por cuenta (Android 1.0.3). */
+.drawer-hint{font-size:11px;color:#9fb4d3;line-height:1.5;margin:4px 12px 10px}
+.account-expand{margin-left:auto;color:#dcb56f;font-size:18px;min-width:15px;text-align:center}
+.account-folders{margin:0 1px 12px 13px;padding:3px 0 8px 10px;border-left:2px solid #435b82}
+.account-folders .drawer-label{margin:8px 9px;color:#b9cbeb;letter-spacing:1.1px}
+.folder-choice{padding-left:9px;min-height:41px}
+.drawer-folder-warning{font-size:11px;line-height:1.5;background:#54323b;color:#f7d9dc;border-radius:8px;padding:9px;margin:5px 8px 9px}
+.drawer-folder-warning button{display:block;margin-top:7px;border:1px solid #e4b873;border-radius:7px;background:transparent;color:#ffdaa0;padding:6px 10px}
+/* THcorreo 1.0.4 · menú estable, administración por dominio y cuentas */
+.drawer-divider{border-top:1px solid #3c4b64;margin:17px 8px 9px}
+.settings-card{margin-bottom:18px}
+.settings-card h2{font-size:18px;display:flex;gap:9px;align-items:center;margin-bottom:12px}
+.settings-card .primary-btn{margin-top:20px}
+.settings-card select:disabled,.settings-card input:disabled{opacity:.7}
+.settings-two{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);column-gap:12px}
+.settings-two label{min-width:0}
+.settings-card .form-note{margin-top:14px}
+
+/* Hotfix 1.0.5: pantalla de navegación independiente del panel superpuesto. */
+.shell{padding-bottom:174px}
+.navigation-page{display:flex;flex-direction:column;gap:11px;padding-bottom:28px}
+.navigation-primary,.navigation-folder,.navigation-expand,.navigation-inbox{color:#e5efff;background:#172947;border:1px solid #394d6c;border-radius:12px;min-height:49px;display:flex;align-items:center;gap:10px;padding:12px 14px;text-align:left}
+.navigation-primary{width:100%;font-weight:650}.navigation-account{border:1px solid #394d6c;border-radius:13px;background:#131f38;overflow:hidden}
+.navigation-account-row{display:flex;align-items:stretch;gap:7px;padding:7px}
+.navigation-expand{flex:1;min-width:0;border:0;background:transparent;padding:9px 7px}
+.navigation-account-name{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0;flex:1}
+.navigation-account-name strong,.navigation-account-name small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.navigation-account-name small{color:#8db9db;font-size:11px}
+.navigation-inbox{font-size:12px;min-height:40px;align-self:center;background:#203c64;padding:10px}
+.navigation-folder-list{padding:4px 12px 13px 27px;border-top:1px solid #344765;display:flex;flex-direction:column;gap:6px}
+.navigation-folder{width:100%;min-height:43px;background:#172f50;padding:10px;font-size:13px}
+.navigation-folder span{flex:1}.navigation-folder small{color:#ffcc7f}
+.navigation-warning{color:#ffe4e9;background:#583040;padding:10px;margin:5px;border-radius:8px;font-size:12px}
+.navigation-warning button{margin-left:10px;color:#fff;background:#384969;border:1px solid #8b9ebe;border-radius:7px;padding:6px}
+.navigation-logout{color:#f3aab5}
+.permanent-nav{position:fixed;bottom:0;left:0;right:0;z-index:25;background:#101d36;border-top:1px solid #435571;padding:8px 10px max(10px,env(safe-area-inset-bottom));display:flex;justify-content:space-around;gap:8px;box-shadow:0 -7px 20px #0006}
+.permanent-nav button{color:#aabfdf;background:transparent;border:0;min-height:52px;min-width:76px;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;border-radius:10px}
+.permanent-nav button.selected{background:#253e63;color:#f2c781}
+.compose-fab{bottom:88px;z-index:21}
+@media (max-width:360px){.topbar{gap:4px;padding-left:8px;padding-right:8px}.header-title strong{font-size:19px}}
+
+/* THcorreo 1.0.6 — Adjuntos salientes y conexiones kDrive */
+.attachment-options{margin-top:17px;margin-bottom:17px}
+.attachment-label{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-weight:650}
+.attachment-label input{flex-basis:100%;margin-top:8px}
+.attachment-list,.cloud-items{list-style:none;padding:0;margin:11px 0 0;display:flex;flex-direction:column;gap:7px;max-height:270px;overflow-y:auto}
+.attachment-list li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 11px;border:1px solid #435879;border-radius:8px;word-break:break-word}
+.attachment-list li span{display:flex;align-items:center;gap:8px;min-width:0}
+.attachment-list button{border:0;background:#253953;color:#ffded7;padding:5px;border-radius:7px}
+.cloud-actions{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.cloud-actions button{display:flex;gap:7px;align-items:center;justify-content:center;color:#e8efff;background:#263b5c;border:1px solid #607390;border-radius:10px;padding:11px}
+.cloud-actions .danger-link{color:#ffc3c6;border-color:#825363}
+.cloud-items li{padding:8px 10px;border-bottom:1px solid #3a4b67;color:#d4e0f2;word-break:break-word;font-size:13px}
+
+/* THcorreo 1.0.7: composición basada en espacio de trabajo, responsive */
+.compose-workspace{display:grid;gap:18px;padding:17px;background:transparent;border:0;box-shadow:none}
+.workspace-head{display:flex;justify-content:space-between;gap:12px;align-items:center;background:#172440;border:1px solid #344563;border-radius:16px;padding:20px}
+.workspace-head h2{font-size:25px;margin:8px 0 4px}.workspace-head p{font-size:12px;color:#9fb0d0;margin:0}
+.workspace-send{border:0;border-radius:11px;padding:11px 14px;background:#e9ba71;color:#10203c;display:flex;gap:8px;align-items:center;font-weight:800}
+.workspace-fields,.workspace-tools{background:#15243e;border:1px solid #324764;padding:18px;border-radius:16px;min-width:0}
+.workspace-fields h3{color:#e9c085;font-size:13px;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px}
+.workspace-editor{min-height:210px;background:#0d182e!important;font-size:15px;line-height:1.65;resize:vertical}
+.workspace-hint{font-size:11px;color:#8fa5c8;margin-top:10px}
+.workspace-tools-head{display:flex;align-items:center;gap:9px;color:#eac182;font-size:15px}
+.workspace-attach{border:1px dashed #83a9cf;border-radius:12px;padding:12px;background:#1d3253;color:#d5e6ff!important}
+.workspace-attach input{background:#0e1c33}
+.workspace-cloud-link{display:flex;align-items:center;gap:8px;border-radius:10px;padding:9px 13px;background:#263b5b;color:#d6e7ff;border:1px solid #5b7395}
+@media(min-width:850px){.compose-workspace{grid-template-columns:minmax(0,1fr) 300px;max-width:1200px;margin:auto}.workspace-head{grid-column:1/-1}.workspace-fields{grid-column:1}.workspace-tools{grid-column:2}}
+@media(max-width:420px){.workspace-head{padding:14px}.workspace-head h2{font-size:21px}.compose-workspace{padding:0;gap:12px}.workspace-fields,.workspace-tools{padding:14px}}
+
+/* THcorreo 1.0.8 — Temas recuperados del diseño original, con nombres propios. */
+:root{
+  --th-bg:#0a1224;--th-header:#0e1b38;--th-surface:#15243e;
+  --th-surface2:#192b49;--th-raised:#1b2e4d;--th-border:#344968;
+  --th-fg:#e4e9f7;--th-muted:#a3b7d4;--th-accent:#e9ba71;
+  --th-action:#1c365c;--th-action-text:#e9f1ff;--th-strong:#f6f9ff;
+}
+:root[data-thcorreo-theme="tlahuis"]{
+  color-scheme:light;--th-bg:#f3f8fb;--th-header:#0b1f53;--th-surface:#ffffff;
+  --th-surface2:#eaf5f7;--th-raised:#e5f2f7;--th-border:#b2c9d9;
+  --th-fg:#183249;--th-muted:#49657b;--th-accent:#12b4b4;
+  --th-action:#d4eff0;--th-action-text:#113c50;--th-strong:#102e46;
+}
+:root[data-thcorreo-theme="emerald"]{
+  --th-bg:#061510;--th-header:#09291d;--th-surface:#0e251d;--th-surface2:#16372a;
+  --th-raised:#153f30;--th-border:#2b624a;--th-fg:#e4f7ed;
+  --th-muted:#a6c8b7;--th-accent:#34d399;--th-action:#1c563f;--th-action-text:#e4ffee;--th-strong:#f4fff8;
+}
+:root[data-thcorreo-theme="amber"]{
+  --th-bg:#13100b;--th-header:#24190e;--th-surface:#2a2115;--th-surface2:#352819;
+  --th-raised:#3b2b19;--th-border:#685033;--th-fg:#fff0db;
+  --th-muted:#d0bda5;--th-accent:#fbbf24;--th-action:#5c401e;--th-action-text:#fff2d9;--th-strong:#fff9ee;
+}
+:root[data-thcorreo-theme="violet"]{
+  --th-bg:#0e0c19;--th-header:#1b1336;--th-surface:#241d3d;--th-surface2:#2d2450;
+  --th-raised:#3a2963;--th-border:#5c4686;--th-fg:#f4edff;
+  --th-muted:#c4b6e2;--th-accent:#c084fc;--th-action:#4a3471;--th-action-text:#fff0ff;--th-strong:#fff7ff;
+}
+:root[data-thcorreo-theme="monochrome"]{
+  --th-bg:#0a0e17;--th-header:#161e2b;--th-surface:#1a2432;--th-surface2:#263346;
+  --th-raised:#2d3949;--th-border:#526173;--th-fg:#e2e8f0;
+  --th-muted:#b4c0d0;--th-accent:#e2e8f0;--th-action:#38465b;--th-action-text:#fff;--th-strong:#fff;
+}
+/* Superficies, tipografía y controles comparten la misma paleta en toda la aplicación. */
+body,.shell,.login-bg{background:var(--th-bg);color:var(--th-fg)}
+.topbar,.permanent-nav{background:var(--th-header);border-color:var(--th-border)}
+.header-title strong,.section-heading h2,.compose-card h2,.workspace-head h2,.settings-card h2{color:var(--th-strong)}
+.header-title span,.section-heading p,.workspace-head p,.form-note,.workspace-hint,.login-card p,.login-foot,.navigation-account-name small{color:var(--th-muted)}
+.icon-btn,.back-link{color:var(--th-fg)}
+.compose-card,.detail-card,.login-card,.workspace-head,.workspace-fields,.workspace-tools,
+.mail-list,.navigation-account,.signature-options,.login-card,.settings-card{background:var(--th-surface);border-color:var(--th-border);color:var(--th-fg)}
+.mail-row,.navigation-folder-list{border-color:var(--th-border)}
+.mail-row.is-unread,.navigation-primary,.navigation-folder,.navigation-inbox,.stats-row span,
+.permanent-nav button.selected,.drawer-choice.active,.view-toggle button.chosen{background:var(--th-surface2);border-color:var(--th-border);color:var(--th-fg)}
+.navigation-expand,.navigation-inbox,.navigation-primary,.navigation-folder{color:var(--th-fg)}
+.navigation-account,.navigation-account-row{background:var(--th-surface)}
+.drawer{background:var(--th-surface);color:var(--th-fg);border-color:var(--th-border)}
+.drawer-choice{color:var(--th-fg)}
+.drawer-choice:hover,.mail-main:hover,.icon-btn:hover{background:var(--th-raised)}
+.avatar,.account-avatar{background:var(--th-raised);border-color:var(--th-border);color:var(--th-accent)}
+.mail-top b,.mail-subject,.navigation-account-name strong,.plain-body{color:var(--th-fg)}
+.mail-top time,.mail-account,.account-label small,.navigation-account-name small{color:var(--th-muted)}
+.overline,.drawer-label,.workspace-fields h3,.workspace-tools-head,.signature-options legend,.permanent-nav button.selected{color:var(--th-accent)}
+.primary-btn,.workspace-send,.compose-fab{background:var(--th-accent);color:var(--th-bg)}
+.compose-card input,.compose-card select,.compose-card textarea,.workspace-editor,
+.login-card input,.attachment-label input{background:var(--th-bg)!important;border-color:var(--th-border);color:var(--th-fg)}
+.compose-card input::placeholder,.compose-card textarea::placeholder{color:var(--th-muted);opacity:.8}
+.signature-options,.attachment-options,.workspace-attach{background:var(--th-surface2);border-color:var(--th-border)}
+.workspace-cloud-link,.cloud-actions button,.navigation-inbox,.navigation-folder,.navigation-primary,
+.permanent-nav button{color:var(--th-fg)}
+.workspace-cloud-link,.cloud-actions button,.signature-preview button{background:var(--th-action);color:var(--th-action-text);border-color:var(--th-border)}
+.login-bg .login-card{background:var(--th-surface);border-color:var(--th-border)}
+:root[data-thcorreo-theme="tlahuis"] .topbar .icon-btn,:root[data-thcorreo-theme="tlahuis"] .topbar .header-title strong,:root[data-thcorreo-theme="tlahuis"] .topbar .header-title span{color:#f1f8ff}
+:root[data-thcorreo-theme="tlahuis"] .permanent-nav button{color:#e2eeff}
+:root[data-thcorreo-theme="tlahuis"] .permanent-nav button.selected{color:#07394a;background:#a7e0e1}
+:root[data-thcorreo-theme="tlahuis"] .primary-btn,:root[data-thcorreo-theme="tlahuis"] .workspace-send,:root[data-thcorreo-theme="tlahuis"] .compose-fab{color:#062f3a}
+/* Selector de seis temas, accesible desde Ajustes. */
+.theme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.theme-choice{display:flex;align-items:center;gap:9px;background:var(--th-surface2);color:var(--th-fg);border:1px solid var(--th-border);border-radius:12px;text-align:left;padding:12px;min-height:73px}
+.theme-choice.active{outline:2px solid var(--th-accent);outline-offset:1px}
+.theme-choice span:nth-child(2){display:flex;flex-direction:column;gap:5px;flex:1;min-width:0}
+.theme-choice strong{font-size:12px;line-height:1.3}
+.theme-choice small{font-size:10px;line-height:1.35;color:var(--th-muted)}
+.theme-choice svg{color:var(--th-accent);flex-shrink:0}
+.theme-swatches{width:36px;height:36px;border-radius:10px;border:1px solid;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.theme-swatches i{display:block;width:17px;height:17px;border-radius:50%}
+@media(max-width:365px){.theme-grid{grid-template-columns:1fr}}
+/* Firma realmente visible al final del cuerpo de redacción, sin inyectarse en el texto. */
+.compose-signature-inline{border-top:1px dashed var(--th-border);margin-top:2px;padding:15px 1px 4px;min-height:77px}
+.compose-signature-label{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:var(--th-accent);margin:0 0 11px}
+.compose-signature-content{white-space:normal;overflow-wrap:anywhere}
+.compose-signature-text{font-size:13px;line-height:1.6;white-space:pre-wrap;color:var(--th-fg)}
+.compose-signature-content img{display:block;margin:10px 0 0;max-width:100%;max-height:220px;object-fit:contain;object-position:left center;background:#fff;padding:6px;border-radius:7px}
+.compose-signature-empty{font-size:12px;color:var(--th-muted);line-height:1.6}
+.signature-save{display:inline-flex;align-items:center;gap:8px;background:var(--th-action);color:var(--th-action-text);border:1px solid var(--th-border);border-radius:9px;padding:10px 14px;margin-top:15px}
+.signature-sync-error{font-size:12px;color:#ffadb4;line-height:1.45}
+:root[data-thcorreo-theme="tlahuis"] .signature-sync-error{color:#a91d2a}
+
+/* THcorreo 1.0.8: Tlahuisca legible. Sin fondo blanco puro ni texto pálido
+   heredado del tema oscuro. Contraste AA para texto normal y controles. */
+:root[data-thcorreo-theme="tlahuis"] {
+  --th-bg:#edf4f7;
+  --th-surface:#FFFFFF;
+  --th-surface2:#e1f1f2;
+  --th-raised:#d2e9ed;
+  --th-border:#b2cbd4;
+  --th-fg:#153649;
+  --th-muted:#426075;
+  --th-accent:#08747c;
+  --th-action:#def2f2;
+  --th-action-text:#153649;
+  --th-strong:#102d3c;
+}
+:root[data-thcorreo-theme="tlahuis"] .login-bg {
+  background:linear-gradient(155deg,#d1e8ec 0%,#edf4f7 62%,#e3f2f4 100%);
+}
+:root[data-thcorreo-theme="tlahuis"] .topbar,
+:root[data-thcorreo-theme="tlahuis"] .permanent-nav {background:#0B1F53;color:#f5fbff}
+:root[data-thcorreo-theme="tlahuis"] .topbar .icon-btn,
+:root[data-thcorreo-theme="tlahuis"] .topbar .header-title strong,
+:root[data-thcorreo-theme="tlahuis"] .topbar .header-title span,
+:root[data-thcorreo-theme="tlahuis"] .permanent-nav button {color:#edf8ff}
+:root[data-thcorreo-theme="tlahuis"] .permanent-nav button.selected {background:#F2B84B;color:#0B1F53}
+:root[data-thcorreo-theme="tlahuis"] .compose-card label,
+:root[data-thcorreo-theme="tlahuis"] .workspace-fields label,
+:root[data-thcorreo-theme="tlahuis"] .workspace-tools label,
+:root[data-thcorreo-theme="tlahuis"] .settings-card label,
+:root[data-thcorreo-theme="tlahuis"] .login-brand small,
+:root[data-thcorreo-theme="tlahuis"] .from-meta small,
+:root[data-thcorreo-theme="tlahuis"] .remote-images-toggle,
+:root[data-thcorreo-theme="tlahuis"] .drawer-hint,
+:root[data-thcorreo-theme="tlahuis"] .security-note,
+:root[data-thcorreo-theme="tlahuis"] .empty-box,
+:root[data-thcorreo-theme="tlahuis"] .loading-message,
+:root[data-thcorreo-theme="tlahuis"] .form-note,
+:root[data-thcorreo-theme="tlahuis"] .workspace-hint,
+:root[data-thcorreo-theme="tlahuis"] .workspace-head p,
+:root[data-thcorreo-theme="tlahuis"] .cloud-items li {color:#426075}
+:root[data-thcorreo-theme="tlahuis"] .is-read .mail-top b,
+:root[data-thcorreo-theme="tlahuis"] .is-read .mail-subject {color:#426075}
+:root[data-thcorreo-theme="tlahuis"] .stats-row span,
+:root[data-thcorreo-theme="tlahuis"] .navigation-account-name small,
+:root[data-thcorreo-theme="tlahuis"] .navigation-folder small {color:#153649}
+:root[data-thcorreo-theme="tlahuis"] .read-switch,
+:root[data-thcorreo-theme="tlahuis"] .back-link,
+:root[data-thcorreo-theme="tlahuis"] .drawer-choice,
+:root[data-thcorreo-theme="tlahuis"] .drawer-choice.active,
+:root[data-thcorreo-theme="tlahuis"] .account-expand {color:#08747c}
+:root[data-thcorreo-theme="tlahuis"] .detail-actions button,
+:root[data-thcorreo-theme="tlahuis"] .view-toggle button,
+:root[data-thcorreo-theme="tlahuis"] .signature-preview button,
+:root[data-thcorreo-theme="tlahuis"] .attachment-list button,
+:root[data-thcorreo-theme="tlahuis"] .navigation-warning button {background:var(--th-action);color:var(--th-action-text);border-color:var(--th-border)}
+:root[data-thcorreo-theme="tlahuis"] .workspace-attach,
+:root[data-thcorreo-theme="tlahuis"] .workspace-attach input,
+:root[data-thcorreo-theme="tlahuis"] .compose-card input[type="file"] {color:#153649!important;background:var(--th-surface2)!important}
+:root[data-thcorreo-theme="tlahuis"] .signature-options input,
+:root[data-thcorreo-theme="tlahuis"] .signature-options textarea,
+:root[data-thcorreo-theme="tlahuis"] .compose-card input,
+:root[data-thcorreo-theme="tlahuis"] .compose-card select,
+:root[data-thcorreo-theme="tlahuis"] .compose-card textarea,
+:root[data-thcorreo-theme="tlahuis"] .login-card input,
+:root[data-thcorreo-theme="tlahuis"] .workspace-editor {background:#f1f8fa!important;color:#153649!important;border-color:#9dbcc8}
+:root[data-thcorreo-theme="tlahuis"] .compose-card input::placeholder,
+:root[data-thcorreo-theme="tlahuis"] .compose-card textarea::placeholder,
+:root[data-thcorreo-theme="tlahuis"] .login-card input::placeholder {color:#4d6b80;opacity:1}
+:root[data-thcorreo-theme="tlahuis"] .primary-btn,
+:root[data-thcorreo-theme="tlahuis"] .workspace-send,
+:root[data-thcorreo-theme="tlahuis"] .compose-fab {background:#F2B84B;color:#0B1F53;border-color:#c99220}
+:root[data-thcorreo-theme="tlahuis"] .new-dot {background:#12B4B4}
+:root[data-thcorreo-theme="tlahuis"] .overline,
+:root[data-thcorreo-theme="tlahuis"] .drawer-label,
+:root[data-thcorreo-theme="tlahuis"] .workspace-fields h3,
+:root[data-thcorreo-theme="tlahuis"] .workspace-tools-head,
+:root[data-thcorreo-theme="tlahuis"] .signature-options legend,
+:root[data-thcorreo-theme="tlahuis"] .compose-signature-label {color:#08747c}
+:root[data-thcorreo-theme="tlahuis"] .notice-box {background:#d7f1ee;color:#0c4a46;border-color:#86c6be}
+:root[data-thcorreo-theme="tlahuis"] .error-box,
+:root[data-thcorreo-theme="tlahuis"] .drawer-folder-warning,
+:root[data-thcorreo-theme="tlahuis"] .navigation-warning {background:#fce8eb;color:#8b2638;border-color:#d9a7ad}
+:root[data-thcorreo-theme="tlahuis"] .attachments {color:#08747c;border-color:var(--th-border)}
+:root[data-thcorreo-theme="tlahuis"] :focus-visible {outline-color:#08747c}
+
+/* Identidad Tlahuisca — paleta institucional (branding literal):
+   Teal #12B4B4, Navy #0B1F53, Gold #F2B84B, White #FFFFFF.
+   Los tonos derivados se reservan a lectura, contraste, divisores y fondos. */
+:root[data-thcorreo-theme="tlahuis"]{
+  --th-brand-teal:#12B4B4;--th-brand-navy:#0B1F53;
+  --th-brand-gold:#F2B84B;--th-brand-white:#FFFFFF;
+  --th-header:#0B1F53;
+}
+:root[data-thcorreo-theme="tlahuis"] .login-brand .brand-symbol,
+:root[data-thcorreo-theme="tlahuis"] .avatar.big,
+:root[data-thcorreo-theme="tlahuis"] .theme-choice.active .theme-swatches{
+  background:#12B4B4;color:#0B1F53;
+}
+:root[data-thcorreo-theme="tlahuis"] .account-avatar,
+:root[data-thcorreo-theme="tlahuis"] .avatar{background:#d9eeee;color:#0B1F53;border-color:#80c8c8}
+:root[data-thcorreo-theme="tlahuis"] .drawer-choice.active,
+:root[data-thcorreo-theme="tlahuis"] .navigation-primary,
+:root[data-thcorreo-theme="tlahuis"] .navigation-inbox,
+:root[data-thcorreo-theme="tlahuis"] .navigation-folder,
+:root[data-thcorreo-theme="tlahuis"] .stats-row span,
+:root[data-thcorreo-theme="tlahuis"] .workspace-head,
+:root[data-thcorreo-theme="tlahuis"] .navigation-account,
+:root[data-thcorreo-theme="tlahuis"] .mail-list{border-color:#b2cbd4}
+:root[data-thcorreo-theme="tlahuis"] .mail-row.is-unread{box-shadow:inset 3px 0 0 #12B4B4}
+:root[data-thcorreo-theme="tlahuis"] .drawer-choice.active{background:#def2f2;color:#0B1F53}
+:root[data-thcorreo-theme="tlahuis"] .theme-choice.active{outline-color:#12B4B4}
+:root[data-thcorreo-theme="tlahuis"] .folder-counter{color:#0B1F53}
+:root[data-thcorreo-theme="tlahuis"] .mail-account{color:#08747c}
+:root[data-thcorreo-theme="tlahuis"] .login-card h1,
+:root[data-thcorreo-theme="tlahuis"] .login-card h2,
+:root[data-thcorreo-theme="tlahuis"] .navigation-account-name strong,
+:root[data-thcorreo-theme="tlahuis"] .from-meta strong{color:#0B1F53}
+:root[data-thcorreo-theme="tlahuis"] .drawer-choice.logout{color:#9f2c44}
+:root[data-thcorreo-theme="tlahuis"] .read-switch:hover{color:#08747c}
+:root[data-thcorreo-theme="tlahuis"] .mail-main:hover,
+:root[data-thcorreo-theme="tlahuis"] .drawer-choice:hover{background:#e0eff1}
+:root[data-thcorreo-theme="tlahuis"] .workspace-attach{border-color:#7db5bb}
+:root[data-thcorreo-theme="tlahuis"] .workspace-attach input{background:#FFFFFF!important}
+:root[data-thcorreo-theme="tlahuis"] .signature-sync-error{color:#9f2c44}
+
+/* THcorreo 1.0.9: identidad por buzón, CC/CCO desplegable y WebDAV genérico. */
+.account-settings-list{display:flex;flex-direction:column;gap:9px;margin-top:16px}
+.account-settings-list button{display:flex;align-items:center;gap:12px;width:100%;border:1px solid var(--th-border);border-radius:11px;background:var(--th-surface2);color:var(--th-fg);padding:12px;text-align:left;min-height:59px}
+.account-settings-list button span{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.account-settings-list button b,.account-settings-list button small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.account-settings-list button small{font-size:11px;color:var(--th-muted)}
+.account-settings-list button:focus-visible{outline:2px solid var(--th-accent)}
+.account-signature-preview{display:flex;flex-direction:column;align-items:flex-start;gap:9px;margin:10px 0;padding:10px;border:1px solid var(--th-border);border-radius:10px;background:var(--th-surface2)}
+.account-signature-preview img{max-width:100%;max-height:220px;background:#fff;object-fit:contain}
+.account-signature-preview button{border:1px solid var(--th-border);background:var(--th-action);color:var(--th-action-text);border-radius:8px;padding:8px;display:flex;align-items:center;gap:6px}
+.recipient-extras{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end;margin:-3px 0 9px}
+.recipient-extras button{border:1px solid var(--th-border);border-radius:18px;background:var(--th-action);color:var(--th-action-text);padding:7px 11px;font-size:12px;font-weight:650}
+.reading-preference{display:flex!important;align-items:center;gap:11px;margin-top:14px;line-height:1.5;color:var(--th-fg)!important}
+.reading-preference input{width:19px!important;height:19px!important;flex-shrink:0;accent-color:var(--th-accent)}
+:root[data-thcorreo-theme="tlahuis"] .recipient-extras button{color:#0B1F53;background:#d7eff1}
+/* THcorreo 1.0.10 — Tlahuisca Noche; paleta oficial con contraste nocturno. */
+:root[data-thcorreo-theme="tlahuis-dark"]{
+ color-scheme:dark;--th-bg:#07152a;--th-header:#0B1F53;--th-surface:#102544;
+ --th-surface2:#173451;--th-raised:#203d5d;--th-border:#3b6375;
+ --th-fg:#eaf6fa;--th-muted:#b4d0d9;--th-accent:#F2B84B;
+ --th-action:#125b68;--th-action-text:#f0fcff;--th-strong:#fff;
+}
+:root[data-thcorreo-theme="tlahuis-dark"] .overline,
+:root[data-thcorreo-theme="tlahuis-dark"] .drawer-label,
+:root[data-thcorreo-theme="tlahuis-dark"] .workspace-fields h3,
+:root[data-thcorreo-theme="tlahuis-dark"] .signature-options legend{color:#56d0d0}
+:root[data-thcorreo-theme="tlahuis-dark"] .primary-btn,
+:root[data-thcorreo-theme="tlahuis-dark"] .workspace-send,
+:root[data-thcorreo-theme="tlahuis-dark"] .compose-fab{background:#F2B84B;color:#0B1F53}
+:root[data-thcorreo-theme="tlahuis-dark"] .permanent-nav button.selected{background:#125b68;color:#fff}
+:root[data-thcorreo-theme="tlahuis-dark"] .new-dot{background:#12B4B4}
+:root[data-thcorreo-theme="tlahuis-dark"] .account-avatar{background:#174f5e;color:#d9ffff;border-color:#12B4B4}
+/* Menú de ajustes en subpantallas */
+.settings-menu{display:flex;flex-direction:column;gap:10px}
+.settings-menu button{width:100%;border:1px solid var(--th-border);background:var(--th-surface);border-radius:15px;
+ display:flex;gap:16px;padding:18px;color:var(--th-fg);align-items:center;text-align:left}
+.settings-menu button>span{display:flex;flex-direction:column;gap:5px}
+.settings-menu button b{font-size:16px}.settings-menu button small{font-size:12px;color:var(--th-muted)}
+.settings-menu button>svg{color:var(--th-accent);flex-shrink:0}
+/* Avatares persistentes por cuenta */
+.account-profile-picture{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--th-accent);flex-shrink:0}
+.avatar-editor{display:flex;align-items:center;gap:16px;padding:15px;border-radius:14px;background:var(--th-surface2);border:1px solid var(--th-border)}
+.avatar-editor-image,.avatar-editor-fallback{width:85px;height:85px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--th-accent)}
+.avatar-editor-fallback{display:flex;align-items:center;justify-content:center;background:var(--th-raised);color:var(--th-fg);font-size:30px}
+.avatar-upload{display:inline-block;border:1px solid var(--th-border);padding:8px 10px;border-radius:10px;background:var(--th-action);color:var(--th-action-text);cursor:pointer}
+.avatar-upload input{position:absolute;opacity:0;width:1px;height:1px}
+.avatar-remove{display:block;background:transparent;color:var(--th-accent);border:0;padding:7px 0}
+/* Explorador WebDAV */
+.cloud-breadcrumb{overflow-wrap:anywhere;color:var(--th-muted);margin:0 0 14px}
+.cloud-explore-button{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;
+ border-radius:12px;padding:14px;background:var(--th-action);color:var(--th-action-text);border:1px solid var(--th-border)}
+.cloud-browser-actions{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.cloud-browser-actions button,.cloud-upload-control{display:flex;align-items:center;gap:6px;padding:9px 10px;border-radius:10px;
+ border:1px solid var(--th-border);background:var(--th-action);color:var(--th-action-text)}
+.cloud-upload-control{position:relative;cursor:pointer}.cloud-upload-control input{position:absolute;opacity:0;width:1px;height:1px}
+.cloud-file-row{display:flex;align-items:center;justify-content:space-between;gap:6px;border-bottom:1px solid var(--th-border);padding:8px 0}
+.cloud-file-name{min-width:0;flex:1;display:flex;gap:8px;align-items:center;text-align:left;background:transparent;color:var(--th-fg);border:none;padding:10px 1px}
+.cloud-file-name span{overflow-wrap:anywhere}.cloud-file-name svg{color:var(--th-accent);flex-shrink:0}
+.cloud-file-actions{display:flex;align-items:center;gap:3px}
+.cloud-file-actions button{background:var(--th-action);color:var(--th-action-text);border:1px solid var(--th-border);border-radius:8px;padding:7px}
+@media(max-width:420px){.cloud-file-row{flex-wrap:wrap}.cloud-file-actions{width:100%;justify-content:flex-end}.avatar-editor{flex-direction:column;align-items:flex-start}}
+
+.mail-account-photo{width:16px;height:16px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:5px}
+
+
+/* THcorreo 1.0.11-alfa: panel de cuentas y almacenamiento separado de ajustes. */
+.drawer-section-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;border:0;background:transparent;
+ padding:15px 12px 12px;color:var(--th-accent);font-size:12px;letter-spacing:1.4px;font-weight:800;text-align:left}
+.drawer-section-toggle span:last-child{font-size:23px;font-weight:700;line-height:1;letter-spacing:0}
+.drawer-section-toggle:focus-visible,.cloud-connection-card:focus-visible{outline:2px solid var(--th-accent);outline-offset:2px}
+.cloud-connections-list{display:flex;flex-direction:column;gap:12px;padding-bottom:32px}
+.cloud-connection-card{display:flex;width:100%;gap:15px;align-items:center;text-align:left;padding:18px 16px;min-height:86px;
+ background:var(--th-surface);border:1px solid var(--th-border);color:var(--th-fg);border-radius:17px}
+.cloud-connection-card:active{background:var(--th-raised)}
+.cloud-connection-icon{width:48px;height:48px;flex-shrink:0;border-radius:13px;border:1px solid var(--th-border);
+ display:flex;align-items:center;justify-content:center;color:var(--th-accent);background:var(--th-surface2)}
+.cloud-connection-description{flex:1;min-width:0;display:flex;flex-direction:column;gap:7px}
+.cloud-connection-description strong{color:var(--th-strong);font-size:17px;overflow-wrap:anywhere}
+.cloud-connection-description small{color:var(--th-muted);font-size:12px;overflow-wrap:anywhere}
+.cloud-connection-chevron{font-size:28px;color:var(--th-accent);padding:0 3px}
+/* La navegación inferior ahora muestra tres destinos: correo, nube, ajustes. */
+.permanent-nav button{min-width:0}
+
+/* Opciones de notificación cifrada/sin contenido */
+.fcm-options {margin:1.2rem 0;padding:1rem;border:1px solid var(--border, #35506c);border-radius:14px;}
+.fcm-options h3 {display:flex;align-items:center;gap:.5rem;margin:0 0 .75rem;font-size:1rem;}
+
+/* Alpanix 1.1.4: movimientos de correo, diagnóstico e importación. */
+.swipe-hint{font-size:.79rem;opacity:.76;margin:.3rem 0 1rem;}
+.delete-mail-btn{border:0;background:transparent;color:var(--text-muted,#9ba9bb);padding:.5rem;cursor:pointer;align-self:center;}
+.delete-mail-btn:disabled{opacity:.4;}
+.diagnostic-actions{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1rem;}
+.diagnostic-actions button{border:1px solid var(--line,#516479);border-radius:9px;padding:.6rem .85rem;background:var(--surface,#24334a);color:inherit;}
+.diagnostic-entry{display:flex;flex-direction:column;gap:.3rem;border-top:1px solid rgba(120,150,180,.25);padding:.8rem 0;overflow-wrap:anywhere;}
+.diagnostic-entry small,.import-preview small{opacity:.8;}
+.diagnostic-entry p{margin:0;font-size:.85rem;}
+.import-preview{max-height:280px;overflow:auto;border:1px solid rgba(120,150,180,.25);border-radius:12px;margin-bottom:1rem;}
+.import-preview>div{display:flex;flex-direction:column;gap:.1rem;padding:.6rem .7rem;border-bottom:1px solid rgba(120,150,180,.18);overflow-wrap:anywhere;}
+
+/* Alpanix: identidad, importación y administración de mensajes */
+.alpanix-login-icon{height:52px;width:52px;object-fit:cover;border-radius:12px;border:1px solid #8e7347}
+.swipe-hint{font-size:11px;color:#95a8c3;margin:0 0 12px 4px}
+.delete-mail-btn{width:36px;min-width:36px;background:transparent;border:0;color:#c78c96;display:flex;align-items:center;justify-content:center}
+.delete-mail-btn:disabled{opacity:.45}.delete-mail-btn:hover{background:#442331}
+.diagnostic-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.diagnostic-actions button{border:1px solid #526483;background:#243a55;color:#f5f7ff;padding:10px 12px;border-radius:9px}
+.diagnostic-entry{border-top:1px solid #43516b;padding:12px 0;display:flex;flex-direction:column;gap:5px;overflow-wrap:anywhere}
+.diagnostic-entry small{font-size:12px;color:#aebed5}.diagnostic-entry p{margin:0;font-size:12px;color:#b3c4dc}
+.import-preview{max-height:280px;overflow:auto;border:1px solid #3c506f;border-radius:12px;margin:12px 0}
+.import-preview>div{display:flex;flex-direction:column;gap:3px;padding:9px 12px;border-bottom:1px solid #3c506f;overflow-wrap:anywhere}
+.import-preview>div:last-child{border-bottom:0}.import-preview small{color:#a9bbd5;font-size:11px}
+
+/* Alpanix 1.1.5 — identidad «Inframundo Privado». Tipografías locales de Fontsource:
+   ninguna petición de fuentes a Google, para no revelar visitas ni contenido. */
+:root[data-thcorreo-theme="alpanix"]{
+  color-scheme:dark;
+  --th-bg:#000000;--th-header:#000000;--th-surface:#121212;
+  --th-surface2:#191919;--th-raised:#242424;--th-border:#363636;
+  --th-fg:#FFFFFF;--th-muted:#B0B0B0;--th-accent:#008080;
+  --th-action:#008080;--th-action-text:#FFFFFF;--th-strong:#FFFFFF;
+}
+:root[data-thcorreo-theme="alpanix"] body,
+:root[data-thcorreo-theme="alpanix"] .shell,
+:root[data-thcorreo-theme="alpanix"] .login-bg{
+  font-family:'Roboto',Arial,sans-serif;background:#000;color:#fff;
+}
+:root[data-thcorreo-theme="alpanix"] :is(h1,h2,h3,h4,.header-title strong,.mail-top b,.drawer-head b,.settings-menu button b){
+  font-family:'Montserrat','Roboto',Arial,sans-serif;letter-spacing:-.02em;
+}
+:root[data-thcorreo-theme="alpanix"] :is(.topbar,.permanent-nav,.drawer){
+  background:#000;border-color:#363636;
+}
+:root[data-thcorreo-theme="alpanix"] :is(.content,.section-heading,.overline){color:#fff}
+:root[data-thcorreo-theme="alpanix"] :is(.mail-list,.compose-card,.detail-card,.login-card,.settings-card,.workspace-fields,.workspace-tools,.workspace-head,.cloud-connection-card,.navigation-account,.fcm-options,.signature-options){
+  background:#121212!important;border-color:#363636;color:#fff;
+}
+:root[data-thcorreo-theme="alpanix"] :is(.mail-row.is-unread,.stats-row span,.theme-choice,.settings-menu button,.account-settings-list button,.cloud-browser-actions button,.cloud-file-actions button,.permanent-nav button.selected,.drawer-choice.active){
+  background:#1b1b1b;color:#fff;border-color:#363636;
+}
+:root[data-thcorreo-theme="alpanix"] :is(.header-title span,.section-heading p,.mail-account,.mail-top time,.form-note,.drawer-hint,.import-preview small,.stats-row span,.compose-signature-label){color:#B0B0B0}
+:root[data-thcorreo-theme="alpanix"] :is(.overline,.drawer-label,.workspace-tools-head,.security-note,.drawer-section-toggle,.cloud-file-name svg){color:#11A3A3}
+:root[data-thcorreo-theme="alpanix"] :is(.primary-btn,.workspace-send,.compose-fab,.signature-save,.cloud-actions button,.workspace-cloud-link){
+  background:#008080!important;color:#FFF!important;border:1px solid #008080!important;
+  border-radius:6px!important;
+}
+:root[data-thcorreo-theme="alpanix"] :is(.primary-btn:hover,.workspace-send:hover,.compose-fab:hover,.cloud-actions button:hover){background:#006c6c!important}
+:root[data-thcorreo-theme="alpanix"] :is(.compose-card input,.compose-card select,.compose-card textarea,.login-card input,.workspace-editor){
+  background:#000!important;color:#FFF!important;border:1px solid #525252!important;border-radius:6px!important;
+}
+:root[data-thcorreo-theme="alpanix"] :is(.mail-list,.compose-card,.settings-card,.detail-card,.login-card,.stats-row span,.settings-menu button,.theme-choice,.fcm-options){border-radius:8px}
+:root[data-thcorreo-theme="alpanix"] .permanent-nav button.selected{color:#FFBF00}
+:root[data-thcorreo-theme="alpanix"] .error-box{background:#332608!important;color:#FFF!important;border:1px solid #FFBF00!important}
+:root[data-thcorreo-theme="alpanix"] .error-box svg,
+:root[data-thcorreo-theme="alpanix"] :is(.new-dot,.fcm-options h3 svg){color:#FFBF00;fill:#FFBF00}
+:root[data-thcorreo-theme="alpanix"] .notice-box{border:1px solid #008080;background:#082929;color:#FFF}
+:root[data-thcorreo-theme="alpanix"] .avatar,
+:root[data-thcorreo-theme="alpanix"] .account-avatar{background:#112626;color:#FFF;border:1px solid #008080}
+:root[data-thcorreo-theme="alpanix"] .login-bg{background:radial-gradient(ellipse at 50% 10%,#102727 0%,#000 68%)}
+.alpanix-main-logo{display:block;max-width:min(75%,300px);max-height:230px;object-fit:contain;margin:0 auto 12px}
+.topbar-brand-icon{width:29px;height:29px;object-fit:cover;border-radius:5px;flex-shrink:0}
+.alpanix-about img{display:block;max-width:min(100%,420px);max-height:390px;object-fit:contain;margin:0 auto 18px;background:#000}
+.alpanix-about p{font-size:14px;line-height:1.7}
+.account-check-error{color:#FFBF00;font-weight:600;margin:5px 0!important}
+.change-entry{border-top:1px solid var(--th-border);margin:12px 0;padding:12px 0}
+.change-entry h3{color:var(--th-accent);margin:0 0 6px;font-size:15px}
+.change-entry p{margin:0;font-size:13px;line-height:1.65}
+.import-explanation{word-break:normal!important;overflow-wrap:break-word;white-space:normal!important;line-height:1.6;max-width:100%}
+.import-choice{display:flex!important;flex-direction:row!important;align-items:center;gap:10px;border-bottom:1px solid var(--th-border);padding:9px 10px}
+.import-choice input{width:20px!important;height:20px!important;flex:0 0 20px;accent-color:#008080}
+.import-choice span{min-width:0;display:flex;flex-direction:column;gap:4px;overflow-wrap:anywhere}
+@media(max-width:420px){.topbar{gap:7px}.topbar-brand-icon{width:24px;height:24px}.header-title strong{font-size:19px}}
+
+.external-links-fallback{background:var(--th-surface);border:1px solid var(--th-border);padding:11px;margin:12px 0;border-radius:8px}
+.external-links-fallback summary{cursor:pointer;color:var(--th-accent);font-weight:650;font-size:13px}
+.external-links-fallback button{display:flex;gap:9px;align-items:center;width:100%;text-align:left;background:var(--th-action);color:var(--th-action-text);padding:10px;margin:9px 0;border:1px solid var(--th-border);border-radius:6px;overflow-wrap:anywhere}
+
+/* Alpanix 1.1.6: enlace web siempre accesible desde el mensaje, aun si el iframe bloquea pulsaciones. */
+.external-links-fallback{margin-top:14px;border:1px solid var(--border,#3d4655);border-radius:10px;padding:12px;background:var(--surface,#121212);color:var(--text,#fff)}
+.external-links-fallback>summary{cursor:pointer;font-weight:700;margin:2px 0 10px}
+.external-link-row{display:flex;flex-wrap:wrap;align-items:center;gap:7px;padding:9px 0;border-top:1px solid #ffffff24}
+.external-link-row>span{display:flex;align-items:center;gap:5px;flex:1;min-width:160px;overflow-wrap:anywhere;font-size:12px;color:var(--text-secondary,#b0b0b0)}
+.external-link-row>button{border:1px solid #008080;color:white;background:#008080;border-radius:6px;padding:7px 9px;cursor:pointer;font-size:12px}
+.external-link-row>button:last-child{background:transparent;border-color:#b0b0b0}
+
+/* Alpanix 1.1.7: arranque silencioso y vista previa cifrada. */
+.startup-brand { width: 76px; height: 76px; object-fit: contain; margin: auto; display: block; }
+.mail-preview-note { color: var(--muted, #B0B0B0); font-size: .85rem; margin: 8px 20px; line-height: 1.4; }
+
+/* Alpanix 1.1.8: el bloque de enlaces está cerrado por React, no por el motor CSS del WebView. */
+.external-links-toggle{display:flex;align-items:center;gap:8px;width:100%;border:0;background:transparent!important;color:var(--th-accent)!important;text-align:left;padding:8px 0!important;margin:0!important;font-weight:700;font-size:13px;cursor:pointer}
+.external-links-content{margin-top:12px}
+/* Swipe con desplazamiento real: el fondo muestra la acción antes de ejecutarla. */
+.mail-row{position:relative;overflow:hidden}
+.mail-row-content{position:relative;z-index:1;display:flex;align-items:stretch;width:100%;min-height:inherit;background:var(--th-surface);transition:transform .18s ease-out;will-change:transform}
+.mail-row.is-unread .mail-row-content{background:var(--th-raised)}
+.mail-row-content.mail-row-dragging{transition:none}
+.mail-swipe-backdrop{position:absolute;inset:0;z-index:0;display:flex;align-items:center;padding:0 17px;font-size:12px;font-weight:750}
+.mail-swipe-backdrop span{display:flex;align-items:center;gap:7px}
+.mail-swipe-read{justify-content:flex-start;background:#066b62;color:white}
+.mail-swipe-delete{justify-content:flex-end;background:#733344;color:white}
+.mail-main{touch-action:pan-y}
+@media(prefers-reduced-motion:reduce){.mail-row-content{transition:none}}

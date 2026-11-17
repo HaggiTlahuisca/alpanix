@@ -1,0 +1,48 @@
+# Dependencias y compilaciones web
+node_modules/
+dist/
+.vite/
+
+# Archivos de compilación de Android y Gradle
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/captures/
+*.iml
+
+# Instaladores, parches y respaldos locales
+*.apk
+*.aab
+*.zip
+*.7z
+
+# Credenciales y llaves privadas (Seguridad)
+*firebase-adminsdk*.json
+google-services*.json
+.env
+.env.*
+*.keystore
+*.jks
+
+# Editores, scripts locales y carpetas de trabajo personal
+.idea/
+.vscode/
+.figma/
+Claude/
+VPS/
+*.bat
+*.ps1
+ChatGPT-*.md
+Correo v2.md
+INSTRUCCIONES_*.md
+LEEME_PRIMERO.md
+README_COMO_COMPILAR.txt
+pnpm-lock.yaml
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Otros archivos
+64.txt
